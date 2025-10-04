@@ -59,6 +59,9 @@ interface Course {
   description: string;
   detailedDescription: string;
   learnings: string[];
+  duration: string;
+  level: string;
+  language: string;
   category: string;
   link: string;
   image: string;
@@ -89,6 +92,9 @@ const courses: Course[] = [
       "Competitive Advantage in Career",
       "Professional Development Opportunities"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "OTHM",
     link: "https://othm.org.uk/",
     image:
@@ -106,6 +112,9 @@ const courses: Course[] = [
       "Sustainable Working Practices",
       "Applicable for All Employee Levels"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "Safety",
     link: "https://iosh.com/",
     image:
@@ -123,6 +132,9 @@ const courses: Course[] = [
       "ESC-Endorsed Qualification",
       "Qualifi UK Recognition"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "Engineering",
     link: "https://europeansafetycouncil.uk/",
     image:
@@ -140,6 +152,9 @@ const courses: Course[] = [
       "Year-Round Learning Sessions",
       "Updated Medical Knowledge and Practices"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "Healthcare",
     link: "",
     image:
@@ -157,6 +172,9 @@ const courses: Course[] = [
       "Apprenticeship Certification",
       "Industry-Relevant Skill Development"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "Vocational",
     link: "https://www.highfieldqualifications.com/",
     image:
@@ -174,6 +192,9 @@ const courses: Course[] = [
       "Pediatric Advanced Life Support (PALS)",
       "Emergency Response Skills for Professionals"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "Healthcare",
     link: "",
     image:
@@ -191,6 +212,9 @@ const courses: Course[] = [
       "Audit Planning and Execution",
       "Compliance and Risk Assessment"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "Business",
     link: "",
     image:
@@ -207,7 +231,10 @@ const courses: Course[] = [
       "Business Knowledge Enhancement",
       "Professional Experience Development",
       "Competitive Advantage in Leadership"
-    ],    
+    ],  
+    duration: "Contact for Details",
+    level: "Contact for Details",  
+    language: "English",
     category: "Business",
     link: "",
     image:
@@ -225,6 +252,9 @@ const courses: Course[] = [
       "Credible Certification",
       "Professional Advancement Opportunities"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "Qualifi",
     link: "https://qualifi.net/qualifications/",
     image:
@@ -242,6 +272,9 @@ const courses: Course[] = [
       "Effective Learning Experience",
       "High-Quality Training Standards"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "Safety",
     link: "",
     image:
@@ -259,8 +292,11 @@ const courses: Course[] = [
       "Safety Management Systems",
       "Practical Application"
     ],
+    duration: "Contact for Details",
+    level: "Level 3",
+    language: "English",
     category: "Safety",
-    link: "",
+    link: "https://www.nebosh.org.uk/qualifications/international-general-certificate/",
     image:
       "https://www.alertmedia.com/wp-content/uploads/2022/10/Blog-Safety-Moment-Ideas.jpg",
   },
@@ -275,7 +311,10 @@ const courses: Course[] = [
       "Sustainability Concepts",
       "Practical Environmental Strategies",
       "In-Depth Industry Knowledge"
-    ],    
+    ], 
+    duration: "Contact for Details",
+    level: "Contact for Details",  
+    language: "English", 
     category: "Safety",
     link: "",
     image:
@@ -293,6 +332,9 @@ const courses: Course[] = [
       "Global University Options (US, UK, India)",
       "Career Advancement Opportunities"
     ],
+    duration: "Contact for Details",
+    level: "Contact for Details",
+    language: "English",
     category: "Degree",
     link: "",
     image:
@@ -460,53 +502,6 @@ const testimonials = [
 //           }}
 //         />
 //       ))}
-//     </div>
-//   );
-// }
-
-// // Animated Wave Background
-// function WaveBackground() {
-//   return (
-//     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-//       <motion.div
-//         className="absolute inset-0 opacity-5"
-//         style={{
-//           background: `
-//             radial-gradient(circle at 20% 50%, cyan 0%, transparent 50%),
-//             radial-gradient(circle at 80% 20%, blue 0%, transparent 50%),
-//             radial-gradient(circle at 40% 80%, teal 0%, transparent 50%)
-//           `,
-//         }}
-//         animate={{
-//           scale: [1, 1.1, 1],
-//           rotate: [0, 2, 0],
-//         }}
-//         transition={{
-//           duration: 20,
-//           repeat: Infinity,
-//           ease: "easeInOut",
-//         }}
-//       />
-
-//       {/* Animated gradient waves */}
-//       <motion.div
-//         className="absolute bottom-0 left-0 right-0 h-32 opacity-10"
-//         style={{
-//           background: `linear-gradient(180deg, 
-//             transparent 0%, 
-//             rgba(6, 182, 212, 0.1) 50%, 
-//             rgba(59, 130, 246, 0.2) 100%)`,
-//         }}
-//         animate={{
-//           scaleY: [1, 1.2, 1],
-//           opacity: [0.1, 0.2, 0.1],
-//         }}
-//         transition={{
-//           duration: 8,
-//           repeat: Infinity,
-//           ease: "easeInOut",
-//         }}
-//       />
 //     </div>
 //   );
 // }
@@ -1627,20 +1622,6 @@ function CourseDetailPage({
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                {/* <div className="flex justify-between">
-                  <span className="text-slate-400">
-                    Duration:
-                  </span>
-                  <span className="text-white">
-                    {course.duration}
-                  </span>
-                </div> */}
-                {/* <div className="flex justify-between">
-                  <span className="text-slate-400">Level:</span>
-                  <span className="text-white">
-                    {course.level}
-                  </span>
-                </div> */}
                 <div className="flex justify-between">
                   <span className="text-slate-400">
                     Category:
@@ -1649,6 +1630,20 @@ function CourseDetailPage({
                     {course.category}
                   </span>
                 </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-400">
+                    Duration:
+                  </span>
+                  <span className="text-white">
+                    {course.duration}
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-slate-400">Level:</span>
+                  <span className="text-white">
+                    {course.level}
+                  </span>
+                </div> 
                 <div className="flex justify-between items-center pt-4 border-t border-slate-700">
                   <span className="text-slate-400">
                     Pricing:
