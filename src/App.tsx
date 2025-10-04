@@ -1987,31 +1987,31 @@ export default function App() {
     navigateToPage('Course-detail');
   };
 
-  // Set initial page based on URL
+  // Handle initial page load & redirect from 404.html
   useEffect(() => {
-    const initialPage = getPageFromURL();
-    setCurrentPage(initialPage);
+    const redirectedPath = sessionStorage.getItem('redirectPath');
+    if (redirectedPath) {
+      sessionStorage.removeItem('redirectPath');
+      window.history.replaceState(null, '', redirectedPath);
+      const initialPage = getPageFromURL();
+      setCurrentPage(initialPage);
+    } else {
+      const initialPage = getPageFromURL();
+      setCurrentPage(initialPage);
+    }
   }, []);
 
-  // Listen for browser back/forward navigation
+  //Handle browser back/forward navigation
   useEffect(() => {
     const handlePopState = () => {
-      const redirectedPath = sessionStorage.getItem('redirectPath');
-      if (redirectedPath) {
-        sessionStorage.removeItem('redirectPath');
-        window.history.replaceState(null, '', redirectedPath);
-        const initialPage = getPageFromURL();
-        setCurrentPage(initialPage);
-      } else {
-        const initialPage = getPageFromURL();
-        setCurrentPage(initialPage);
-      }
-
+      const page = getPageFromURL();
+      setCurrentPage(page);
     };
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
+
 
   const renderPage = () => {
     switch (currentPage) {
