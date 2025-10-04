@@ -58,6 +58,7 @@ interface Course {
   title: string;
   description: string;
   detailedDescription: string;
+  learnings: string[];
   category: string;
   link: string;
   image: string;
@@ -81,7 +82,13 @@ const courses: Course[] = [
     title: "OTHM Qualifications",
     description:
       "OTHM Qualifications is an awarding body in England that is governed by Ofqual. We have a number of qualifications that will allow you to go ahead of the competition.",
-    detailedDescription: "",
+    detailedDescription: "OTHM qualifications span various levels, from Level 3 to Level 7, covering areas such as business management, health and safety, leadership, education, and professional development. They are carefully structured to provide practical, career-focused learning that aligns with current industry standards, giving learners a competitive advantage in the global job market. By pursuing OTHM qualifications, learners gain international recognition, enhanced employability, and the opportunity to progress to higher education or professional roles. Each qualification is designed to develop both theoretical understanding and practical skills, ensuring learners can confidently apply their knowledge in real-world scenarios. With OTHM, you are not just learning—you are advancing your career and standing out from the competition.",
+    learnings: [
+      "Globally Recognized Qualifications",
+      "Ofqual-Regulated Certification",
+      "Competitive Advantage in Career",
+      "Professional Development Opportunities"
+    ],
     category: "OTHM",
     link: "https://othm.org.uk/",
     image:
@@ -92,7 +99,13 @@ const courses: Course[] = [
     title: "IOSH Course",
     description:
       "The IOSH course is designed for employees at all levels, aiming to strengthen workplace safety culture. It reflects IOSH’s commitment to sustainable working environments.",
-    detailedDescription: "",
+    detailedDescription: "The IOSH course is a globally recognized program designed for employees at all levels, from entry-level staff to senior management, to enhance knowledge and awareness of workplace health and safety. The course focuses on promoting a strong safety culture within organizations, helping participants understand their responsibilities and the best practices for preventing accidents and managing risks effectively. Reflecting IOSH’s commitment to creating sustainable and safe working environments, the course combines practical guidance with real-world scenarios, enabling learners to apply safety principles confidently in their day-to-day roles. On completion, participants gain the skills to contribute to safer workplaces, improve organizational compliance, and foster a proactive approach to health and safety.",
+    learnings: [
+      "Workplace Safety Awareness",
+      "Safety Culture Enhancement",
+      "Sustainable Working Practices",
+      "Applicable for All Employee Levels"
+    ],
     category: "Safety",
     link: "https://iosh.com/",
     image:
@@ -103,7 +116,13 @@ const courses: Course[] = [
     title: "ESC IDHSE",
     description:
       "The International Diploma in Health and Safety Engineering (IDHSE) is the catalyst qualification of the European Safety Council (ESC) endorsed by Qualifi UK.",
-    detailedDescription: "",
+    detailedDescription: "The International Diploma in Health and Safety Engineering (IDHSE) is a flagship qualification offered by the European Safety Council (ESC) and officially endorsed by Qualifi UK. This program is designed to equip professionals with advanced knowledge and skills in health and safety engineering, focusing on the identification, assessment, and management of workplace risks. The IDHSE provides a comprehensive understanding of safety principles, regulatory compliance, and engineering controls, enabling participants to design and implement effective safety systems. By completing this diploma, learners enhance their professional credibility, gain international recognition, and are empowered to lead health and safety initiatives in diverse industries.",
+    learnings: [
+      "Advanced Health and Safety Knowledge",
+      "Engineering Safety Practices",
+      "ESC-Endorsed Qualification",
+      "Qualifi UK Recognition"
+    ],
     category: "Engineering",
     link: "https://europeansafetycouncil.uk/",
     image:
@@ -114,7 +133,13 @@ const courses: Course[] = [
     title: "CME Courses",
     description:
       "The UAE’s Continuing Medical Education program is crucial for enhancing skills and abilities among healthcare workers to ensure quality patient care.",
-    detailedDescription: "EBSTAC, provide CME course by DHA (Dubai Health Authority) and HAAD have approved (Health Authority-Abu Dhabi). CME hours are available for all of our healthcare courses. The learning modules determine how many CME credits are issued. CME sessions are available all year to help healthcare professionals improve their knowledge and stay up to date on the newest medical advances.",
+    detailedDescription: "EBSTAC, provide CME course by DHA (Dubai Health Authority) and HAAD have approved (Health Authority-Abu Dhabi). CME hours are available for all of our healthcare courses. The learning modules determine how many CME credits are issued. CME sessions are available all year to help healthcare professionals improve their knowledge and stay up to date on the newest medical advances. By participating in the CME program, healthcare workers can maintain professional excellence, meet regulatory requirements, and deliver safe, effective, and up-to-date medical services, contributing to a stronger and more efficient healthcare system in the UAE.",
+    learnings: [
+      "DHA & HAAD Approved CME Courses",
+      "Earn CME Credits for Healthcare Training",
+      "Year-Round Learning Sessions",
+      "Updated Medical Knowledge and Practices"
+    ],
     category: "Healthcare",
     link: "",
     image:
@@ -125,7 +150,13 @@ const courses: Course[] = [
     title: "Highfield Courses (HABC)",
     description:
       "Highfield is one of the UK’s leading awarding organizations for vocational qualifications, work-based learning, and apprenticeship qualifications.",
-    detailedDescription: "",
+    detailedDescription: "Highfield is one of the UK’s foremost awarding organizations, specializing in vocational qualifications, work-based learning programs, and apprenticeship certifications. Recognized for its commitment to quality and practical learning, Highfield provides a wide range of qualifications that equip learners with the skills and knowledge needed to succeed in their chosen careers. Their programs are designed to meet industry standards, enhance employability, and support professional development across various sectors, ensuring learners gain both theoretical understanding and practical expertise that can be directly applied in the workplace.",
+    learnings: [
+      "UK-Recognized Vocational Qualifications",
+      "Work-Based Learning Opportunities",
+      "Apprenticeship Certification",
+      "Industry-Relevant Skill Development"
+    ],
     category: "Vocational",
     link: "https://www.highfieldqualifications.com/",
     image:
@@ -136,7 +167,13 @@ const courses: Course[] = [
     title: "ASHI Approved Courses",
     description:
       "Basic Life Support training, Advanced Cardiovascular Life Support and Pediatric advanced life support are the course for working professionals.",
-    detailedDescription: "",
+    detailedDescription: "ASHI-approved courses are specialized training programs designed for working professionals in healthcare and emergency response. These include Basic Life Support (BLS), Advanced Cardiovascular Life Support (ACLS), and Pediatric Advanced Life Support (PALS), each aimed at equipping participants with essential life-saving skills. These courses focus on practical, hands-on training to handle real-life medical emergencies, improve patient outcomes, and ensure that professionals are confident and competent in delivering critical care across adults and children. Completion of ASHI-approved programs enhances both professional credibility and workplace preparedness.",
+    learnings: [
+      "Basic Life Support (BLS)",
+      "Advanced Cardiovascular Life Support (ACLS)",
+      "Pediatric Advanced Life Support (PALS)",
+      "Emergency Response Skills for Professionals"
+    ],
     category: "Healthcare",
     link: "",
     image:
@@ -147,7 +184,13 @@ const courses: Course[] = [
     title: "ISO Lead Auditor Course",
     description:
       "The ISO Lead Auditor training enables you to develop the necessary expertise to perform a Quality Management System (QMS) audit.",
-    detailedDescription: "",
+    detailedDescription: "The ISO Lead Auditor training is designed to equip professionals with the knowledge and skills required to effectively plan, conduct, and lead audits of Quality Management Systems (QMS). The course covers auditing principles, ISO standards, risk-based thinking, and reporting techniques, enabling participants to assess organizational compliance and identify areas for improvement. By completing this training, learners gain the competence to perform audits confidently, contribute to continuous quality improvement, and support organizations in achieving and maintaining ISO certification.",
+    learnings: [
+      "ISO Lead Auditor Skills",
+      "Quality Management System (QMS) Auditing",
+      "Audit Planning and Execution",
+      "Compliance and Risk Assessment"
+    ],
     category: "Business",
     link: "",
     image:
@@ -158,7 +201,13 @@ const courses: Course[] = [
     title: "Competency Certification Trainings",
     description:
       "In today’s Competitive business, leaders are appointed based on credentials, knowledge and experience.",
-    detailedDescription: "",
+    detailedDescription: "Competency Certification Training is designed to empower professionals with the skills, knowledge, and recognized credentials needed to excel in today’s competitive business environment. In modern workplaces, leadership and key roles are increasingly awarded based on demonstrated competence, practical expertise, and verified qualifications. This training helps participants enhance their professional capabilities, validate their expertise, and gain a competitive edge, enabling them to take on leadership positions and make informed, effective decisions in their organizations.",
+    learnings: [
+      "Leadership Credentials",
+      "Business Knowledge Enhancement",
+      "Professional Experience Development",
+      "Competitive Advantage in Leadership"
+    ],    
     category: "Business",
     link: "",
     image:
@@ -169,9 +218,15 @@ const courses: Course[] = [
     title: "Qualifi Qualifications",
     description:
       "Qualifi is recognised as an Awarding Organisation (AO) by the Office of Qualifications and Examinations Regulation (Ofqual).",
-    detailedDescription: "",
+    detailedDescription: "Qualifi is a nationally recognized Awarding Organisation (AO) regulated by the Office of Qualifications and Examinations Regulation (Ofqual) in the UK, ensuring that all its qualifications meet strict standards of quality, credibility, and relevance. It offers a broad portfolio of professional, vocational, and academic programs across multiple levels, from foundational to advanced, designed to equip learners with the knowledge and skills demanded by today’s competitive global workforce. Qualifi qualifications are internationally recognized, providing learners with enhanced career prospects, practical expertise, and opportunities for progression into higher education or specialized professional roles. By pursuing Qualifi certifications, individuals gain validated credentials that not only demonstrate competence but also position them ahead in their chosen fields.",
+    learnings: [
+      "Ofqual Recognized Awarding Organisation",
+      "Regulated Qualifications",
+      "Credible Certification",
+      "Professional Advancement Opportunities"
+    ],
     category: "Qualifi",
-    link: "",
+    link: "https://qualifi.net/qualifications/",
     image:
       "https://d36i36zeavk0em.cloudfront.net/images/Education-Training.jpeg?v=1716280929",
   },
@@ -180,7 +235,13 @@ const courses: Course[] = [
     title: "Third Party Health and Safety Training",
     description:
       "Our Safety Trainers and Consultants are highly qualified and capable of delivering the courses successfully and effectively worldwide.",
-    detailedDescription: "",
+    detailedDescription: "Our Safety Trainers and Consultants are highly experienced, certified professionals with extensive expertise in occupational health and safety. They are adept at delivering courses effectively, ensuring that participants gain a thorough understanding of safety principles, regulations, and best practices. With a proven track record of training professionals across diverse industries and countries, our trainers combine practical knowledge with interactive learning methods, making complex concepts easy to grasp. Their guidance ensures that learners not only complete the courses successfully but are also fully prepared to apply safety practices confidently in real-world workplace environments worldwide.",
+    learnings: [
+      "Expert Safety Trainers",
+      "Global Course Delivery",
+      "Effective Learning Experience",
+      "High-Quality Training Standards"
+    ],
     category: "Safety",
     link: "",
     image:
@@ -188,26 +249,56 @@ const courses: Course[] = [
   },
   {
     id: 11,
+    title: "NEBOSH IGC Online Course",
+    description:
+      "NEBOSH IGC is one of the top notch international safety course which is preferred by global employers from all industrial segments.",
+    detailedDescription: "The NEBOSH IGC is widely regarded as the world’s most preferred safety qualification among safety professionals. Recently, NEBOSH revised the IGC syllabus in collaboration with OHS specialists and leading organizations. This updated version aligns with the demands of the digital era and makes it easier to understand essential health and safety concepts and practices. The revised syllabus emphasizes key topics that are vital for ensuring workplace safety. It also features a practical assessment, giving learners hands-on experience in real work environments and helping them apply safety principles effectively. By successfully completing the NEBOSH IGC course, individuals can develop a strong occupational health and safety management plan for their organization, ensuring a safe and healthy workplace.",
+    learnings: [
+      "Health and Safety Principles",
+      "Risk Assessment & Hazard Control",
+      "Safety Management Systems",
+      "Practical Application"
+    ],
+    category: "Safety",
+    link: "",
+    image:
+      "https://www.alertmedia.com/wp-content/uploads/2022/10/Blog-Safety-Moment-Ideas.jpg",
+  },
+  {
+    id: 12,
     title: "IEMA Certification",
     description:
       "The IEMA Certificate in Environmental Management will give you in-depth understanding of sustainability and environmental concepts.",
-    detailedDescription: "",
+    detailedDescription: "The IEMA Certificate in Environmental Management provides participants with a comprehensive understanding of sustainability, environmental management, and best practices for minimizing environmental impact. The course covers key concepts such as resource efficiency, environmental regulations, and sustainable business strategies, enabling learners to integrate environmental considerations into organizational decision-making. By completing this certification, professionals gain the knowledge and skills to promote sustainable practices, support regulatory compliance, and contribute to creating environmentally responsible and resilient organizations.",
+    learnings: [
+      "Environmental Management Principles",
+      "Sustainability Concepts",
+      "Practical Environmental Strategies",
+      "In-Depth Industry Knowledge"
+    ],    
     category: "Safety",
     link: "",
     image:
       "https://www.khweza.net/wp-content/uploads/2017/04/IMG_20180517_143229-e1560816614531-800x600.jpg",
   },
   {
-    id: 12,
+    id: 13,
     title: "Distance Education Programs",
     description:
       "Earn a Degree Online from a Top-Rated University and Boost Your Career. We are providing US, UK, Indian Universities degrees.",
-    detailedDescription: "",
+    detailedDescription: "We offer fully recognized degree programs from leading universities in the US, UK, and India, allowing you to gain world-class education from the comfort of your home. Our online degrees are designed to provide flexibility, quality learning, and practical knowledge that can be immediately applied in your professional life. By enrolling, you can enhance your qualifications, expand your career opportunities, and achieve your personal and professional goals without the need to relocate or disrupt your current commitments.",
+    learnings: [
+      "Online Degree Programs",
+      "Top-Rated University Accreditation",
+      "Global University Options (US, UK, India)",
+      "Career Advancement Opportunities"
+    ],
     category: "Degree",
     link: "",
     image:
       "https://www.acc.edu.in/wp-content/uploads/2024/12/Artboard-1.png",
   },
+  
 ];
 
 const jobs: Job[] = [
@@ -1577,12 +1668,7 @@ function CourseDetailPage({
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
-                  {[
-                    "Safety protocols and emergency procedures",
-                    "Equipment operation and maintenance",
-                    "Industry best practices and standards",
-                    "Hands-on practical training",
-                  ].map((item, index) => (
+                  {course.learnings.map((item, index) => (
                     <motion.li
                       key={index}
                       className="flex items-center gap-3 text-slate-300"
