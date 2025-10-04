@@ -1996,8 +1996,17 @@ export default function App() {
   // Listen for browser back/forward navigation
   useEffect(() => {
     const handlePopState = () => {
-      const page = getPageFromURL();
-      setCurrentPage(page);
+      const redirectedPath = sessionStorage.getItem('redirectPath');
+      if (redirectedPath) {
+        sessionStorage.removeItem('redirectPath');
+        window.history.replaceState(null, '', redirectedPath);
+        const initialPage = getPageFromURL();
+        setCurrentPage(initialPage);
+      } else {
+        const initialPage = getPageFromURL();
+        setCurrentPage(initialPage);
+      }
+
     };
 
     window.addEventListener('popstate', handlePopState);
