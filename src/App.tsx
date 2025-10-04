@@ -73,7 +73,6 @@ interface Job {
   description: string;
   requirements: string[];
   qualifications: string[];
-  benefits: string[];
 }
 
 const courses: Course[] = [
@@ -119,7 +118,7 @@ const courses: Course[] = [
     category: "Healthcare",
     link: "",
     image:
-      "https://clinmax.com/wp-content/uploads/2022/11/doctor-giving-presentation-team-interim-doctors-min-scaled.jpg",
+      "https://veo.co.uk/wp-content/uploads/2021/04/VEO-clinical-learning-header-1024x683.jpeg",
   },
   {
     id: 5,
@@ -233,13 +232,6 @@ const jobs: Job[] = [
       "First Aid and CPR certification",
       "Experience with e-learning platforms"
     ],
-    benefits: [
-      "Competitive UK salary package",
-      "Private healthcare coverage",
-      "Pension scheme",
-      "Training and certification support",
-      "Relocation assistance available"
-    ]
   },
   {
     id: 2,
@@ -262,13 +254,6 @@ const jobs: Job[] = [
       "Project management experience",
       "Knowledge of DNV-GL standards"
     ],
-    benefits: [
-      "Competitive Norwegian market rates",
-      "Per diem and travel allowances",
-      "Comprehensive insurance package",
-      "Professional development budget",
-      "Flexible contract terms"
-    ]
   },
   {
     id: 3,
@@ -291,13 +276,6 @@ const jobs: Job[] = [
       "Multicultural team management experience",
       "Fluency in English and Mandarin"
     ],
-    benefits: [
-      "Attractive Singapore package",
-      "Annual performance bonus",
-      "Medical and dental coverage",
-      "Educational assistance",
-      "Visa sponsorship available"
-    ]
   },
   {
     id: 4,
@@ -320,13 +298,6 @@ const jobs: Job[] = [
       "Video production and editing skills",
       "Understanding of adult learning principles"
     ],
-    benefits: [
-      "Fully remote position",
-      "Flexible working hours",
-      "Health insurance stipend",
-      "Professional development budget",
-      "Modern equipment provided"
-    ]
   }
 ];
 
@@ -586,20 +557,7 @@ function Header({
 
           {/* Mobile Contact Icons and Menu Button */}
           <div className="flex items-center space-x-4 lg:hidden">
-            <motion.a
-              className="text-slate-300 hover:text-cyan-400 transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Phone className="w-5 h-5" />
-            </motion.a>
-            <motion.a
-              className="text-slate-300 hover:text-cyan-400 transition-colors"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Mail className="w-5 h-5" />
-            </motion.a>
+            
             <motion.button
               onClick={toggleMobileMenu}
               className="text-slate-300 hover:text-white transition-colors"
@@ -726,7 +684,7 @@ function Footer({
               </motion.a>
 
               <motion.a
-                href="https://twitter.com/YourProfile"
+                href="https://x.com/deep_train88423"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-cyan-400 transition-colors"
@@ -1455,21 +1413,6 @@ function JobsPage() {
                             <li key={idx} className="text-slate-300 text-sm flex items-start gap-2">
                               <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></span>
                               {qual}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div>
-                        <h4 className="text-white mb-3 flex items-center gap-2">
-                          <Award className="w-5 h-5 text-cyan-400" />
-                          Benefits
-                        </h4>
-                        <ul className="space-y-2">
-                          {job.benefits.map((benefit, idx) => (
-                            <li key={idx} className="text-slate-300 text-sm flex items-start gap-2">
-                              <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></span>
-                              {benefit}
                             </li>
                           ))}
                         </ul>
